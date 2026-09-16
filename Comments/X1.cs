@@ -2,7 +2,7 @@
 
 public class X1
 {
-    public static int M(int q, int z)
+    public static int SumOfSquares(int q, int z)
     {
         int p = 0;
 
