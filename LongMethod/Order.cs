@@ -18,12 +18,7 @@ public class Order
     {
         ValidateItems();
 
-        // Subtotal calculation
-        double subtotal = 0.0;
-        foreach (var item in _items)
-        {
-            subtotal += item.Price * item.Quantity;
-        }
+        var subtotal = GetSubtotal();
 
         // Discount rules
         double discount = 0.0;
@@ -48,9 +43,19 @@ public class Order
         
     }
 
+    private double GetSubtotal()
+    {
+        double subtotal = 0.0;
+        foreach (var item in _items)
+        {
+            subtotal += item.Price * item.Quantity;
+        }
+
+        return subtotal;
+    }
+
     void ValidateItems()
     {
-        // Validation
         if (_items == null)
         {
             throw new InvalidOperationException("Items cannot be null");
