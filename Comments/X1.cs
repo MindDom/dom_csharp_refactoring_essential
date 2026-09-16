@@ -4,21 +4,18 @@ public class X1
 {
     public static int SumOfSquares(int lowerBound, int upperBound)
     {
-        int p = 0;
+        int squareSum = 0;
 
         for (int i = lowerBound; i <= upperBound; i++)
         {
-            // Add square of each number in the range
-            p += N(i);
+            squareSum += SquareInt(i);
         }
 
-        // Return accumulated sum
-        return p;
+        return squareSum;
     }
 
-    static int N(int k)
+    static int SquareInt(int k)
     {
-        // Return square of input
         return k * k;
     }
 }
