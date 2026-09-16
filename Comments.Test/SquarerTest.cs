@@ -3,22 +3,21 @@
 using NUnit.Framework;
 
 [TestFixture]
-public class X1Test
+public class SquarerTest
 {
     [Test]
-    public void T1()
+    public void SumOfSquaresGivesExpectedResultTest()
     {
         int a = 7;
         int b = 12;
 
-        // Expected: sum of squares from 7 to 12
         int expected = 0;
         for (int i = a; i <= b; i++)
         {
             expected += i * i;
         }
 
-        int actual = X1.M(a, b);
+        int actual = Squarer.SumOfSquares(a, b);
 
         Assert.That(actual, Is.EqualTo(expected));
     }
