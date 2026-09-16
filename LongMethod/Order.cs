@@ -56,28 +56,6 @@ public class Order
     }
 }
 
-public class Customer
-{
-    public bool IsLoyal { get; }
-
-    public Customer(bool loyal)
-    {
-        IsLoyal = loyal;
-    }
-}
-
-public class OrderItem
-{
-    public double Price { get; }
-    public double Quantity { get; }
-
-    public OrderItem(double price, double quantity)
-    {
-        Price = price;
-        Quantity = quantity;
-    }
-}
-
 public class OrderSummary
 {
     public double Subtotal { get; }
