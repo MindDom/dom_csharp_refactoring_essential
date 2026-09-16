@@ -30,8 +30,6 @@ public class Order
         double total = taxableAmount + tax;
 
         return new OrderSummary(subtotal, discount, tax, total);
-
-        
     }
 
     private double CalculateDiscount(double subtotal)
@@ -54,7 +52,7 @@ public class Order
         double subtotal = 0.0;
         foreach (var item in _items)
         {
-            subtotal += item.Price * item.Quantity;
+            subtotal += item.OrderTotal;
         }
 
         return subtotal;

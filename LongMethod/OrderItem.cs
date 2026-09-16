@@ -11,6 +11,8 @@ namespace LongMethod
         public double Price { get; }
         public double Quantity { get; }
 
+        public double OrderTotal => Price * Quantity;
+
         public OrderItem(double price, double quantity)
         {
             Price = price;
