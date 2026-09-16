@@ -16,16 +16,7 @@ public class Order
 
     public OrderSummary Summarise()
     {
-        // Validation
-        if (_items == null)
-        {
-            throw new InvalidOperationException("Items cannot be null");
-        }
-
-        if (_items.Count == 0)
-        {
-            throw new InvalidOperationException("Order must contain items");
-        }
+        ValidateItems();
 
         // Subtotal calculation
         double subtotal = 0.0;
@@ -53,6 +44,22 @@ public class Order
         double total = taxableAmount + tax;
 
         return new OrderSummary(subtotal, discount, tax, total);
+
+        
+    }
+
+    void ValidateItems()
+    {
+        // Validation
+        if (_items == null)
+        {
+            throw new InvalidOperationException("Items cannot be null");
+        }
+
+        if (_items.Count == 0)
+        {
+            throw new InvalidOperationException("Order must contain items");
+        }
     }
 }
 
