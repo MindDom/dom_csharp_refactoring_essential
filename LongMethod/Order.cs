@@ -7,6 +7,7 @@ public class Order
 {
     private readonly List<OrderItem> _items;
     private readonly Customer _customer;
+    private const double TaxRate = 0.2;
 
     public Order(List<OrderItem> items, Customer customer)
     {
@@ -24,7 +25,7 @@ public class Order
 
         // Tax calculation
         double taxableAmount = subtotal - discount;
-        double tax = taxableAmount * 0.20;
+        double tax = taxableAmount * TaxRate;
 
         // Total calculation
         double total = taxableAmount + tax;
