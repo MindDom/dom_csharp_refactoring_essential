@@ -6,12 +6,11 @@ using NUnit.Framework;
 public class X1Test
 {
     [Test]
-    public void T1()
+    public void SumOfSquaresGivesExpectedResultTest()
     {
         int a = 7;
         int b = 12;
 
-        // Expected: sum of squares from 7 to 12
         int expected = 0;
         for (int i = a; i <= b; i++)
         {
