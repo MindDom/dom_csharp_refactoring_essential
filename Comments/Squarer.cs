@@ -1,6 +1,6 @@
 ﻿namespace Comments;
 
-public class X1
+public class Squarer
 {
     public static int SumOfSquares(int lowerBound, int upperBound)
     {

@@ -3,7 +3,7 @@
 using NUnit.Framework;
 
 [TestFixture]
-public class X1Test
+public class SquarerTest
 {
     [Test]
     public void SumOfSquaresGivesExpectedResultTest()
@@ -17,7 +17,7 @@ public class X1Test
             expected += i * i;
         }
 
-        int actual = X1.SumOfSquares(a, b);
+        int actual = Squarer.SumOfSquares(a, b);
 
         Assert.That(actual, Is.EqualTo(expected));
     }
